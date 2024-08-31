@@ -1,0 +1,35 @@
+def imcc():
+  peso=0
+  altura=0
+  
+  print("Bem vido ao calculador de IMC\n")
+  print("Caso sua altura/peso não seja um valor inteiro, use ponto ao inves de virgula\n")
+
+  try:
+    peso=float(input("Digite o valor de seu peso em kg:  "))
+    altura=float(input("Digite o valor de sua altura em metros:  "))
+    if altura==0:
+      print("VALOR IMPOSSIVEL")
+      imcc()
+  except ValueError:
+    print("\n****DIGITE UM VALOR VÁLIDO****\n")
+    imcc()
+
+  imc=peso/altura**2
+  if imc < 18.5:
+    print(f"O seu imc é: {imc:.2f}")
+    print("Você esta ABAIXO DO SEU PESO.")
+  elif imc >= 25 and imc<=29.9:
+    print(f"O seu imc é: {imc:.2f}")
+    print("Você esta SOBREPESO.")
+  elif imc >18.5 and imc<=24.9:
+    print(f"O seu imc é: {imc:.2f}")
+    print("Você esta com o PESO NORMAL.")
+  elif imc >= 30:
+    print(f"O seu imc é: {imc:.2f}")
+    print("Você esta com OBESIDADE.")
+  else:
+    print("Você fez o impossível!!!")
+    imcc()
+
+imcc()
