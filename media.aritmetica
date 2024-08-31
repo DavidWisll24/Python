@@ -1,0 +1,29 @@
+def main(n, quant):
+  n=0
+  quant=0
+  nv=0
+  try:
+    quant= int(input("Digite a quantidade de termos a serem analisados: "))
+    if quant<=0:
+      print("Quantidade inválida, tente novamente!")
+      print("\n")
+      main(n, quant)
+  except ValueError:
+    print("Digite um valor válido!")
+    print("\n")
+    main(n, quant)
+
+  
+  for nv in range(quant):
+    try:
+      nv=int(input("Digite o valor a ser somado: "))
+      n += nv
+      
+    except ValueError:
+      print("Digite um valor válido! Faça tudo de novo!")
+      print("\n")
+      main(n, quant)
+
+  print("A média aritmética é: ", n/quant)
+
+main(0, 0)
