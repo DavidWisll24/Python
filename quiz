@@ -1,0 +1,128 @@
+import time as t
+
+print("******************")
+t.sleep(0.5)
+print("**Vamos De Quiz?**")
+t.sleep(0.5)
+print("******************")
+t.sleep(1)
+nome=input("\nQual seu nome?  ")
+t.sleep(1)
+
+print("\nOlá",nome,"!!!!! Bem vindo(a). Vamos começar o quiz!")
+t.sleep(1)
+
+def fazdenovo():
+  try:
+    r1=int(input("\n1° Redes é melhor ou ADM? \n 1(Redes)\n 2(ADM)\n "))
+    if r1==1:
+      print("\nVocê acertou! Ai simm!!!\n")
+    elif r1==2:
+      print("\nVocê errou! Melhore seu conceitos!!!\n")
+    else:
+      print("\nNem tem essa opção!!!\n")
+      fazdenovo()
+  except ValueError:
+    print("\nDigite apenas números, pfvr.\n")
+    fazdenovo()
+  t.sleep(1)
+
+  try:
+    r2=int(input("\n2° Qual o segundo nome do criador desse quiz? \n  1(Jeredy) \n 2(Davidson) \n  3(Wisllety) \n  4(Fontanum) \n"))
+    if r2==1:
+      print("\nHahaha, quase, mas também gosto desse.\n")
+      
+    elif r2==2:
+        print("\nVocê errou! Ai nãooo!!!\n")
+    elif r2==3:
+        print("\nVocê acertou! Ai simm!!!\n")
+      
+    elif r2==4:
+        print("\nVocê errou! Mas eu queria!!!\n")
+    
+    else:
+        print("\nVocê não digitou nenhuma das opções. Faz direitinho mulher.\n")
+  except ValueError:
+    print("\nDigite apenas números, pfvr.\n")
+    fazdenovo()
+    
+  t.sleep(1)
+
+  
+  try:
+    r3=int(input ("3° Qual é o valor de logaritmo de 32 na base 8? \n 1(4/2) \n 2(3) \n 3(1/2) \n 4(5/3)\n "))
+
+    if r3==1:
+      print("\nVocê errou! Tem q estudar em!!!\n")
+    elif r3==2:
+      print("\nVocê errou! Tem q estudar em!!!\n")
+    elif r3==3:
+      print("\nVocê errou feio d+!!!!\n")
+    elif r3==4:
+      print("\nVocê acertou! Ai simm, q orgulho!!!\n")
+    else:
+      print("\nVocê não digitou nenhuma das opções. Faz direitinho mulher.\n")
+      fazdenovo()
+  except ValueError:
+    print("\nDigite apenas números, pfvr.\n")
+    fazdenovo()
+    
+  t.sleep(1)
+
+  try:
+    r4=int(input("\n4° Exagerado: \n 1(jogado aos seus pés) \n 2(Sim, muito) \n 3(Eu? jamais) \n 4(Cazuzaaaa)\n"))
+    if r4==1:
+      print("\nVocê acertou! Ai simm!!!\n")
+    elif r4==2:
+      print("\nVocê errou! Melhores seus conhecimentos.\n")
+    elif r4==3:
+      print("\nVocê errou! Melhores seus conhecimentos.\n")
+    elif r4==4:
+      print("\nVocê errou! Melhores seus conhecimentos.\n")
+    else:
+      print("\nVocê não digitou nenhuma das opções. Faz direitinho mulher.\n")
+      fazdenovo()
+  except ValueError:
+    print("\nDigite apenas números, pfvr.\n")
+    fazdenovo()
+    
+  t.sleep(1)
+
+  try:
+    r5=int(input("\n5° Qual é o primeiro ranger verde Americano? \n 1(Jason Miller) \n 2(Tommy Oliver) \n 3(Sky Anderson)\n"))
+    if r5==1:
+      print("\nVocê errou! Melhores seus conhecimentos, decepcionante.\n")
+    elif r5==2:
+      print("\nVocê acertou! Certeza q não roubou?\n")
+    elif r5==3:
+      print("\nVocê errou! Melhores seus conhecimentos. Muito decepcionante.\n")
+    else:
+      print("\nVocê não digitou nenhuma das opções. Faz direitinho mulher.\n")
+      fazdenovo()
+  except ValueError:
+    print("\nDigite apenas números, pfvr.\n")
+    fazdenovo()
+
+  t.sleep(1)
+
+  try:
+    rx=int(input("\n6° Os arduinos utilizam a programação python? \n   1(Sim)\n   2(Não)\n"))
+    if rx==1:
+      print("\n DECEPÇÃO \n")
+      t.sleep(1)
+      print("\n Esperav mais \n")
+      print("\nAcabou o Quiz, espero que tenha gostado, até a próxima!!!\n")
+
+    elif rx==2:
+      print("\nParabens,você acertou!!!\n")
+      t.sleep(1)
+      print("Acabou o quiz, espero que tenha gostado, até a próxima!!!\n")
+
+    else:
+      print("\nVocê não digitou nenhuma das opções. Faz direitinho mulher, sei que é difícil.\n")
+      fazdenovo()
+  except ValueError:
+    print("\nDigite apenas números, pfvr.\n")
+    fazdenovo()
+
+fazdenovo()
