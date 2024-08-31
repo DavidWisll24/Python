@@ -1,0 +1,50 @@
+import time as t
+
+def site ():
+    saldo=0
+    deposito=0
+    sacar=0
+    ato=0
+
+    print("Bem vindo ao BancoETERMERB!!!\n")
+    print("Para realizar uma ação, digite o número correspondente:\n [1] - Depositar\n [2] - Sacar\n [3] - Verificar Saldo\n [4] - Sair do site\n")
+    t.sleep(4)
+    
+    while True:
+        try:
+            ato = int(input("\nDigite o número correspondente de sua ação:\n--> "))
+
+            if ato==1:
+                deposito = float(input("\nDigite o valor que será depositado:\n--> "))
+                saldo+=deposito
+                t.sleep(1)
+
+            elif ato==2:
+                sacar = float(input("\nDigite o valor de seu saque:\n--> "))
+                t.sleep(1)
+                if sacar > saldo:
+                    print("\nVocê não tem saldo suficiente.")
+                else:
+                    saldo-=sacar
+                    print("\nVocê sacou seu dinheiro com sucesso.")
+                    t.sleep(1)
+        
+            elif ato==3:
+                print("\nSeu saldo é de ",saldo)
+
+            elif ato==4:
+                print("\nObrigado pela preferencia, até a proxima!")
+                t.sleep(1)
+                break
+
+            else:
+                print("\nVocê não digitou uma opção valida!")
+        except ValueError:
+            print("\nVocê não digitou uma opção valida!\n")
+            site()
+
+site()
+
+volta=int(input("\nVocê saiu do site, digite 1 para retornar, ou digite qualquer outro número para encerrar a maquína!\n-->"))
+if volta==1:
+    site()
