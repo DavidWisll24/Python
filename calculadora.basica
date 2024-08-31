@@ -1,0 +1,32 @@
+print("********************************\n     OPERAÇÕES MATEMÁTEMATICAS BASÍCA \n********************************")
+
+print("\n 1 -- SOMA")
+print("\n 2 -- SUBTRAÇÃO")
+print("\n 3 -- MULTIPLICAÇÃO")
+print("\n 4 -- DIVISÃO\n")
+
+def cal():
+    num1 = float(input("DIGITE UM NÚMERO: "))
+    num2 = float(input("DIGITE OUTRO NÚMERO: "))
+    opera = int(input("DIGITE O VALOR CORRESPONDENTE À OPERAÇÃO QUE DESEJA: "))
+    resultado = 0
+
+    if opera == 1:
+        resultado = num1 + num2
+        print("O resultado dessa soma é ", resultado)
+    elif opera == 2:
+        resultado = num1 - num2
+        print("O resultado dessa subtração é ", resultado)
+    elif opera == 3:
+        resultado  = num1 * num2
+        print("O resultado dessa multiplicação é ", resultado)
+
+    elif opera == 4:
+        resultado = num1 / num2
+        print("O resultado dessa divisão é ", resultado)
+
+    else:
+        print("\nOPERAÇÃO INVÁLIDA\n")
+        cal()
+
+cal()
