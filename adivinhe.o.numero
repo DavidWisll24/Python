@@ -1,0 +1,15 @@
+import random as r
+
+num = r.randint(1, 100)
+
+while True:
+    palpite = float(input("Digite um valor: "))
+    if palpite > num :
+        print("É um número menor.")
+    elif palpite < num :
+        print("É um número maior.")
+    elif  palpite == num:
+        print("PARABENS!!! VOCÊ ACERTOU!!!")
+        break
+    else: 
+        print("Valor invalido")
